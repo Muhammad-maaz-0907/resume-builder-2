@@ -1,0 +1,144 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.dark-theme {
+    background-color: #000000;
+    color: #FFDD00;
+}
+
+.light-theme {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px;
+    width: 100%;
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #FFDD00;
+}
+
+h1 {
+    color: #FFDD00;
+    text-align: center;
+    font-size: 2em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    color: #FFDD00;
+}
+
+input, textarea, button {
+    font-size: 16px;
+    padding: 10px;
+    background-color: #333333;
+    border: 1px solid #FFDD00;
+    color: #FFFFFF;
+    border-radius: 8px;
+}
+
+button {
+    background-color: #FF0000;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #FFDD00;
+    box-shadow: 0 0 10px #FFDD00;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.sun {
+    color: #FFDD00;
+}
+
+.moon {
+    color: #FF0000;
+}
+
+/* Preview Styles */
+.resume-preview {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #222222;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #FFDD00;
+}
+
+.resume-preview h2 {
+    color: #FFDD00;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.resume-preview h4 {
+    color: white;
+    font-size: 1.2em;
+    text-shadow: 0px 0px 8px red;
+}
+
+.light-theme .resume-preview h4 {
+    color: red;
+    text-shadow: 0px 0px 8px black;
+}
+
+.profile-pic {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #FFDD00;
+    margin-bottom: 15px;
+}
+
+/* Background Effects */
+.background-effects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/mnt/data/Ryomen Sukuna (1).jpg") center center no-repeat;
+    background-size: cover;
+    filter: blur(20px) opacity(0.5);
+    z-index: -1;
+}

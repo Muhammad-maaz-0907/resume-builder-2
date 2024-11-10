@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Inline CSS to ensure background image is styled */
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(20px) opacity(0.5);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="dark-theme">
+
+    <!-- Background Image -->
+    <img src="/resumebuilder/Ryomen Sukuna (1) (1).jpg" alt="Background" class="background-image">
+
+    <!-- Theme Toggle with Icons -->
+    <div class="theme-toggle">
+        <span onclick="toggleTheme()" class="icon sun">&#x2600;</span>
+        <span onclick="toggleTheme()" class="icon moon">&#x263D;</span>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h1>Resume Builder</h1>
+        <form id="resumeForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="John Doe" required>
+
+            <label for="jobTitle">Job Title</label>
+            <input type="text" id="jobTitle" placeholder="Software Engineer" required>
+
+            <label for="profilePic">Upload Picture</label>
+            <input type="file" id="profilePic" accept="image/*" onchange="loadImage(event)">
+
+            <label for="summary">Summary</label>
+            <textarea id="summary" rows="4" placeholder="Brief professional summary..." required></textarea>
+
+            <label for="experience">Experience</label>
+            <textarea id="experience" rows="4" placeholder="Job experience details..." required></textarea>
+
+            <label for="education">Education</label>
+            <textarea id="education" rows="3" placeholder="Educational background..." required></textarea>
+
+            <label for="skills">Skills</label>
+            <textarea id="skills" rows="3" placeholder="List your skills..." required></textarea>
+
+            <button type="button" onclick="generateResume()">Preview Resume</button>
+            <button type="button" onclick="generatePDF()">Download PDF</button>
+        </form>
+
+        <div id="resumePreview" class="resume-preview">
+            <!-- Resume Preview will be generated here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</body>
+</html>
